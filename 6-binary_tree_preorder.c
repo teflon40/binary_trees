@@ -6,7 +6,7 @@
  *
  * @tree: a pointer to the root node of the tree to traverse
  * @func: a pointer to a function to call for each node.
- * 	The value in the node must be passed as an argument to this function.
+ *	The value in the node must be passed as an argument to this function.
  *
  * Do nothing, if func or tree is NULL.
  */
