@@ -3,10 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define Is_Leaf(node)		(!(node)->right && !(node)->left ? 1 : 0)
 #define Have_Child(node)	((node)->left || (node)->right ? 1 : 0)
 #define Is_Root(node)		(!(node)->parent ? 1 : 0)
+#define Find_Sibling(node)	((node)->parent->left == (node) ? (node)->parent->right : (node)->parent->left)
+#define Find_Uncle(node)	(!(node)->parent->parent ? NULL : Find_Sibling((node)->parent))
 
 #define Max(a, b)		((a) > (b) ? (a) : (b))
 
