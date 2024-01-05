@@ -17,12 +17,10 @@ int binary_tree_is_full(const binary_tree_t *tree)
 		return (0);
 	else if (Is_Leaf(tree))
 		return (1);
-	else
-	{
-		retval = binary_tree_is_full(tree->left);
-		if (retval == 0)
-			return (0);
-		retval = binary_tree_is_full(tree->right);
-	}
+
+	retval = binary_tree_is_full(tree->left);
+	if (retval == 0)
+		return (0);
+	retval = binary_tree_is_full(tree->right);
 	return (retval);
 }
