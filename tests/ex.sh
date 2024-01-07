@@ -2,7 +2,7 @@
 # execute test files
 
 verbose=false
-flags="-Wall -Werror -Wextra -pedantic -std=gnu89"
+flags=" -g -Wall -Werror -Wextra -pedantic -std=gnu89"
 tempfile="tmp"
 srcfiles="$HOME/me/binary_trees/"
 testfile="$HOME/me/binary_trees/tests"
